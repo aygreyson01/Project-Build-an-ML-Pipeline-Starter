@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+import os
 import scipy.stats
 
 
@@ -70,3 +71,10 @@ def test_price_range(data, min_price, max_price):
     """
     assert data['price'].between(min_price, max_price).all(), \
         f"Found prices outside the range of {min_price}-{max_price}"
+
+
+# Define the functions we want to add
+functions_to_add = """
+def test_row_count(data):
+    """
+    Check that the size
